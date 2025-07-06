@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sitemap Link Extractor</h1>
+
+        <div class="input-section">
+            <label for="websiteUrl">Website URL (to find sitemap via robots.txt or common paths):</label>
+            <input type="url" id="websiteUrl" placeholder="e.g., https://example.com">
+
+            <p class="or-separator">OR</p>
+
+            <label for="sitemapUrl">Direct Sitemap URL (if known):</label>
+            <input type="url" id="sitemapUrl" placeholder="e.g., https://example.com/sitemap.xml">
+
+            <p class="instructions">Please provide either a Website URL or a Direct Sitemap URL.</p>
+
+            <button id="fetchButton">Fetch Sitemap Links</button>
+        </div>
+
+        <div id="loading-indicator" style="display: none;">
+            <p>Loading...</p>
+        </div>
+
+        <div id="error-message" class="error" style="display: none;">
+            <p>Error: <span id="error-text"></span></p>
+        </div>
+
+        <div id="results-container">
+            <!-- Extracted links will be displayed here -->
+        </div>
+
+        <button id="copyAllButton" style="display: none;">Copy All Links</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
